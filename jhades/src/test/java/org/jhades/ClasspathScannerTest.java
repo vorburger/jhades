@@ -1,6 +1,5 @@
 package org.jhades;
 
-import static org.jhades.TestUtils.*;
 import java.net.URL;
 import java.util.List;
 import org.jhades.model.ClasspathEntry;
@@ -8,12 +7,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.jhades.model.ClasspathResource;
 import org.jhades.model.ClazzLoader;
-import org.jhades.model.UrlClazzLoader;
 import org.jhades.service.ClasspathScanner;
 
 public class ClasspathScannerTest {
 
-    private ClasspathScanner scanner = new ClasspathScanner();
+    private final ClasspathScanner scanner = new ClasspathScanner();
 
     @Test
     public void testFindAllClassLoaders() {

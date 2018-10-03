@@ -38,7 +38,6 @@ public final class ZipUtils {
      *
      * @param zipFilename - the zip file to unzip
      * @param destDirname - the destination directory
-     * @throws IOException
      */
     public static void unzip(String zipFilename, String destDirname) throws IOException {
         unzip(zipFilename, destDirname);

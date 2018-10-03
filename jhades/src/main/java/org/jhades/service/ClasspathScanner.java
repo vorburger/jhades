@@ -54,7 +54,7 @@ import org.jhades.utils.StdOutLogger;
 public class ClasspathScanner {
 
     public static final String BOOTSTRAP_CLASS_LOADER = "Bootstrap class loader";
-    private StdOutLogger logger = StdOutLogger.getLogger();
+    private final StdOutLogger logger = StdOutLogger.getLogger();
 
     /**
      *
@@ -112,8 +112,6 @@ public class ClasspathScanner {
      * Finds all class loaders on the classpath.
      *
      * All classloaders names will be returned, with an indication if they are supported by jHades or not.
-     *
-     * @return
      */
     public List<ClazzLoader> findAllClassLoaders() {
         return findAllClassLoaders(getClass().getClassLoader());
@@ -162,7 +160,7 @@ public class ClasspathScanner {
      * @param clazz - the class being searched.
      * @return - the classpath resource containing all the class versions, or null if not found
      */
-    public ClasspathResource findClass(Class clazz) {
+    public ClasspathResource findClass(Class<?> clazz) {
         String classResourceName = clazz.getName().replace(".", "/") + ".class";
         List<ClasspathResource> allResources = findAllClasspathResources();
         ClasspathResource foundResource = null;

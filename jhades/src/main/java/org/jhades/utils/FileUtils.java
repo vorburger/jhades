@@ -34,11 +34,11 @@ public final class FileUtils {
                 }
 
                 @Override
-                public FileVisitResult postVisitDirectory(Path dir,
+                public FileVisitResult postVisitDirectory(Path newDir,
                         IOException exc) throws IOException {
-                    logger.debug("Deleting dir: " + dir);
+                    logger.debug("Deleting dir: " + newDir);
                     if (exc == null) {
-                        Files.delete(dir);
+                        Files.delete(newDir);
                         return FileVisitResult.CONTINUE;
                     } else {
                         throw exc;

@@ -15,7 +15,7 @@ import javax.servlet.ServletContextListener;
  */
 public class JHadesServletListener implements ServletContextListener {
 
-    private JHades console = new JHades();
+    private final JHades console = new JHades();
 
     @Override
     public void contextDestroyed(ServletContextEvent arg0) {
@@ -31,8 +31,8 @@ public class JHadesServletListener implements ServletContextListener {
         }
     }
 
-    protected void runJHades(JHades console) {
-        console.overlappingJarsReport()
+    protected void runJHades(JHades aConsole) {
+        aConsole.overlappingJarsReport()
                 .printClassLoaderNames()
                 .dumpClassloaderInfo()
                 .printClasspath()

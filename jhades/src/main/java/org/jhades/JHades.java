@@ -17,7 +17,7 @@ import org.jhades.service.ClasspathScanner;
  */
 public class JHades {
 
-    private ClasspathScanner scanner = new ClasspathScanner();
+    private final ClasspathScanner scanner = new ClasspathScanner();
 
     public JHades printClassLoaderNames() {
 
@@ -126,7 +126,7 @@ public class JHades {
         return findResource(resourceName);
     }
 
-    public JHades findClass(Class clazz) {
+    public JHades findClass(Class<?> clazz) {
 
         if (clazz == null) {
             throw new IllegalArgumentException("Class name cannot be null.");
