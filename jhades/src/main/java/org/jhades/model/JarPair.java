@@ -9,8 +9,9 @@ import java.util.Objects;
  */
 public class JarPair {
 
-    private ClasspathEntry jar1;
-    private ClasspathEntry jar2;
+    private final ClasspathEntry jar1;
+    private final ClasspathEntry jar2;
+
     private long dupClassesTotal;
 
     public JarPair(ClasspathEntry jar1, ClasspathEntry jar2) {

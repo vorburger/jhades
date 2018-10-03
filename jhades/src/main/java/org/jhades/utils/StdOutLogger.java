@@ -5,7 +5,7 @@ package org.jhades.utils;
  * A logger to write results to stdout. No logging libraries such as slf4j, log4j, logback, etc. where used on jHades -
  * this is intentional.
  *
- * This is because logging libraries are an ocasional source of classpath problems on development environments, and
+ * This is because logging libraries are an occasional source of classpath problems on development environments, and
  * using this class allows JHades to be of help on those situations as well.
  *
  */

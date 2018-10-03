@@ -30,9 +30,11 @@ import org.jhades.utils.StdOutLogger;
 public class ClasspathEntry {
 
     private static final StdOutLogger logger = StdOutLogger.getLogger();
+
     private final ClazzLoader classLoader;
     private final String url;
-    private List<ClasspathResourceVersion> resourceVersions = new ArrayList<>();
+    private final List<ClasspathResourceVersion> resourceVersions = new ArrayList<>();
+
     private boolean lazyLoadDone = false;
 
     public ClasspathEntry(ClazzLoader classLoader, String url) {

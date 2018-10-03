@@ -13,10 +13,10 @@ import java.util.Objects;
  */
 public abstract class ClazzLoader {
 
-    private String name;
-    private String details;
-    private boolean isSupported;
-    private List<ClasspathEntry> classpathEntries = new ArrayList<>();
+    private final String name;
+    private final String details;
+    private final boolean isSupported;
+    private final List<ClasspathEntry> classpathEntries = new ArrayList<>();
 
     public ClazzLoader(String name, String details, boolean isSupported) {
         this.name = name;
@@ -52,6 +52,7 @@ public abstract class ClazzLoader {
 
     @Override
     public int hashCode() {
+        // TODO huh?!  run error-prone on this...
         int hash = 5;
         return hash;
     }

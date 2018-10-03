@@ -12,7 +12,7 @@ import java.util.Objects;
 public class ClasspathResourceVersion {
 
     private final ClasspathEntry classpathEntry;
-    private String resourceName;
+    private final String resourceName;
     private final long fileSize;
 
     public ClasspathResourceVersion(ClasspathEntry classpathEntry, String resourceName, long classSize) {
